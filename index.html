@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr HABUDUBU | Official Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo/IMG_8087.jpeg" alt="Mr HABUDUBU Logo">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#platforms">Platforms</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <img src="header/IMG_7577.jpeg" alt="Mr HABUDUBU Artist Photo">
+        <div class="banner-text">
+            <h1>Mr HABUDUBU</h1>
+            <p>Official Music Artist</p>
+            <a href="https://www.youtube.com/c/ASMOABDULLAH" class="btn" target="_blank">Listen Now</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-text">
+            <h2>About</h2>
+            <p>Mr HABUDUBU, known professionally as ASMO ABDULLAH, is an emerging independent rapper and lyricist hailing from Sylhet, Bangladesh, and currently based in Oman. Drawing from his pure Bangali roots and khati Sylheti dialect, he crafts raw hip-hop tracks that blend powerful storytelling with authentic delivery. His music explores themes of resilience, unrequited love, life's struggles, and personal rebirth, often in Bangla and Sylheti, with occasional Hindi releases. As a dedicated artist in the modern South Asian hip-hop scene, ASMO pours his soul into verses that resonate with raw emotion and contemporary sounds. With hits like "JOKER," "ROCKSTAR," and "9 TO 5," he continues to build his legacy through soulful melodies and unfiltered narratives, captivating listeners worldwide.</p>
+        </div>
+    </section>
+
+    <section id="music" class="music">
+        <h2>Music</h2>
+        <div class="music-grid">
+            <div class="music-item">
+                <img src="cover/Copy of Copy of Black and.jpg" alt="9 TO 5">
+                <p>9 TO 5</p>
+                <a href="https://music.apple.com/us/album/9-to-5/1860959248" target="_blank">Listen on Apple Music</a>
+            </div>
+            <div class="music-item">
+                <img src="cover/IMG_8182.png" alt="JOKER">
+                <p>JOKER</p>
+                <a href="https://www.youtube.com/watch?v=rdtWUf2Nc88" target="_blank">Watch on YouTube</a>
+            </div>
+            <div class="music-item">
+                <img src="cover/IMG_8180.png" alt="ROCKSTAR">
+                <p>ROCKSTAR</p>
+                <a href="https://www.youtube.com/watch?v=-azYXVeh81I" target="_blank">Watch on YouTube</a>
+            </div>
+            <div class="music-item">
+                <img src="cover/IMG_8176.png" alt="SYLHETI VIBES">
+                <p>SYLHETI VIBES</p>
+                <a href="https://music.apple.com/us/artist/asmo-abdullah/1860330114" target="_blank">Listen on Apple Music</a>
+            </div>
+            <div class="music-item">
+                <img src="cover/Black & Yellow New Dark Theme.jpg" alt="I AM GONE">
+                <p>I AM GONE</p>
+                <a href="https://music.apple.com/us/album/i-am-gone-single/1860330116" target="_blank">Listen on Apple Music</a>
+            </div>
+        </div>
+        <iframe src="https://embed.music.apple.com/us/artist/asmo-abdullah/1860330114" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
+    </section>
+
+    <section id="platforms" class="platforms">
+        <h2>Music Available On</h2>
+        <ul>
+            <li><a href="https://music.apple.com/us/artist/asmo-abdullah/1860330114" target="_blank">Apple Music</a></li>
+            <li><a href="https://www.amazon.com/music/player/artists/B0G66989KY/asmo-abdullah" target="_blank">Amazon Music</a></li>
+            <li><a href="https://open.spotify.com/search/ASMO%20ABDULLAH" target="_blank">Spotify</a></li>
+            <li><a href="https://music.youtube.com/search?q=ASMO+ABDULLAH" target="_blank">YouTube Music</a></li>
+        </ul>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid"></div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social">
+            <a href="https://www.youtube.com/c/ASMOABDULLAH" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/asmoabdullah/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@asmoabdullah" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://x.com/asmoabdullah" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/asmoabdullah" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        fetch('https://api.github.com/repos/mrhabudubu/mrhabudubu/contents/gallery')
+            .then(response => response.json())
+            .then(data => {
+                const galleryGrid = document.querySelector('.gallery-grid');
+                data.forEach(file => {
+                    if (file.type === 'file' && file.name.match(/\.(jpg|jpeg|png|gif)$/i)) {
+                        const img = document.createElement('img');
+                        img.src = file.download_url;
+                        img.alt = file.name;
+                        galleryGrid.appendChild(img);
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading gallery:', error));
+    </script>
+</body>
+</html>
