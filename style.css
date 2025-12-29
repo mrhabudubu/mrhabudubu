@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #fff;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.banner-text h1 {
+    font-size: 3em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.about, .music, .gallery, .platforms, .contact {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.music-grid, .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.music-item {
+    text-align: center;
+}
+
+.music-item img {
+    width: 100%;
+    height: auto;
+}
+
+.music-item a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+}
+
+.platforms ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.platforms a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.contact button {
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.social a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .banner-text h1 {
+        font-size: 2em;
+    }
+    .logo {
+        width: 80px;
+    }
+}
